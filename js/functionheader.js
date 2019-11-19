@@ -1,15 +1,5 @@
 
-var paginas = ["Categorias","MisProyectos","Nuevo_Proyecto","Detalle_Proyecto","Donar","Contactar","Faq"];
-var pag, nuevo;
 
-window.onload = function(){
-	pag = String(window.location);// se queda
-	nuevo = extraerPagina(pag);
-	console.log("nuevo " + nuevo);
-	if(!addButton(nuevo,paginas)){
-		document.getElementById("titulo").style.width = "55%";
-	}
-};
 
 function addButton(nuevo,pagina){
 	var found = false;

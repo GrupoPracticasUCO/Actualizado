@@ -11,6 +11,10 @@ body{
 	padding-bottom: 10%;
 }
 
+#seleccion_idioma{
+    padding: 30px 0px;
+}
+
 /*------------------HEADER---------------------*/
 .cab-lang-home{
 	float: left;
@@ -25,7 +29,7 @@ body{
 }
 
 .home-buscar input{
-	padding: 5px 10px;
+	padding: 5px 15px;
 	border-radius: 3px 3px;
 	border: 1px solid lightgray;
 }

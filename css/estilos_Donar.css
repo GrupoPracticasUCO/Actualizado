@@ -7,9 +7,8 @@ body{
 
 #cuerpo{
 	background-color: white;
-	padding-left: 5%;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding: 5%;
+	padding-bottom: 50%;
 }
 
 #paybox{
@@ -17,6 +16,8 @@ body{
 	border-radius: 10px;
 	width: 40%;
 	padding: 3%;
+	margin-right: 1%;
+	float: left;
 }
 
 #paybox form > input{
@@ -34,4 +35,19 @@ body{
 #comentario_P{
 	display: block;
 	margin-bottom: 5%;
+}
+
+.masInfo{
+	width: 45%;
+	float: right;
+}
+
+.masInfo img{
+	height: 400px;
+	width: auto;
+	margin-top: 2%;	
+}
+
+.masInfo div p{
+	font-size: 2em;
 }

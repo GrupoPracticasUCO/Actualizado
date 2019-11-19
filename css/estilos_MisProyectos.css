@@ -8,6 +8,12 @@ body{
 #cuerpo{
 	background-color: white;
 	padding-bottom: 80%;
+	padding-top: 2%;
+}
+
+#selector{
+	margin-left: 2%;
+	margin-bottom: 1%;
 }
 
 #proyectos{
