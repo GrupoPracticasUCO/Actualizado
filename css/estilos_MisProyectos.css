@@ -7,7 +7,7 @@ body{
 
 #cuerpo{
 	background-color: white;
-	padding-bottom: 80%;
+	padding-bottom: 90%;
 	padding-top: 2%;
 }
 
@@ -16,18 +16,21 @@ body{
 	margin-bottom: 1%;
 }
 
-#proyectos{
+#Cizquierda{
+	float: left;
 	margin-top: 1%;
 	margin-bottom: 1%;
 	margin-right: 4%;
 	margin-left: 2%;
-	border: 1px solid black;
 	width: 50%;
-	float: left;
+}
+
+#proyectos{
+	border: 1px solid black;
 	overflow-y: scroll;
-	height: 1000px;
 	border-radius: 5px;
 	padding-right: 1%;
+	height: 1000px;
 }
 
 #proyectos #CProy{
@@ -102,4 +105,8 @@ body{
 #imgPrSelect img{
 	height: 495px;
 	width: auto;
+}
+
+#botPag{
+margin: 1%;
 }
