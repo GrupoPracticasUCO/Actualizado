@@ -7,13 +7,17 @@ and open the template in the editor.
 <html>
 	<head>
 		<title>Modificar_Datos</title>
+		<author Antonio Gómez Giménez><!--Mayoría del código reciclado de Óscar Godoy, ya que registrarse y Modificar datos son muy similares-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="nombre" content="Página de Modificar Datos">
+		<meta name="palabras_clave" content="HTML,CSS,JavaScript">
 		<link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+		<link href="css/estilos_HF.css" rel="stylesheet" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
-		<link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
-		<script src="js/funciones.js" type="text/javascript"></script>
 		<script src="js/functionheader.js" type="text/javascript"></script>
+		<script src="js/funciones_FormReg.js" type="text/javascript"></script>
+		<script src="js/funciones_Antonio.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="cuerpo">
@@ -32,18 +36,14 @@ and open the template in the editor.
 						</select>
 					</section>
 				</div>
-				<section class="titulo">
-					<!-- <img src="img/ciencia3.png" alt=""/> -->
-					<h2 id="titulo">Fund the Science</h2>
-				</section> 
 				<!-- ************************************************************** -->
 				<!-- Se controla la muestra del boton con javascript, dependiendo de la pagina que
 				 necesite mostrar alguna informacion para el usuario -->
-				<!-- <div class="cab-der">
-					<section>
+				<div class="cab-der">
+					<!--<section>
 						<a href="#" id="acceso">Mi cuenta / Registrarse</a>
-					</section>
-				</div>-->
+					</section>-->
+				</div>
 				<!-- ********************* FIN DE COMENTARIO ********************** -->
 				<!-- ************************************************************** -->
 			</header>
@@ -53,7 +53,7 @@ and open the template in the editor.
 			<article id="contenido-reg">
 				<section class="izq-registro">
 					<div class="form-registro">
-						<form id="form-registro" action="/formulario_modificar.js" name="formregistro" method="POST">
+						<form id="form-registro" name="formregistro" method="POST">
 							<input type="text" id="nombre" name="nombre" placeholder="Nombre" required="required" /><span class="ast-form">*</span><br>
 							<input type="text" id="apellido" name="apellido" placeholder="Apellidos"  required="required" /><span class="ast-form">*</span><br>
 							<input type="email" id="email" name="email" placeholder="Correo Electronico"  required="required" /><span class="ast-form">*</span><br>
