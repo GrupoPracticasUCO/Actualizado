@@ -7,12 +7,12 @@ body{
 
 #cuerpo{
 	background-color: white;
-	padding-bottom: 50%;
+	padding-bottom: 550px;
 }
 
 #cuerpo_acceder{
 	background-color: white;
-	padding-bottom: 25%;
+	padding-bottom: 300px;
 }
 
 #info{
@@ -44,13 +44,29 @@ body{
 	margin-top: 5%;
 	margin-right: 2%;
   float: right;
-  width: 50%;
+  width: 57%;
   text-align: justify;
   border: 1px;
   border-style: solid;
   border-color: black;
   border-radius: 5px;
 }
+
+#curriculum iframe{
+	width: 95%;
+	height: 362px;
+	margin: 2%;
+}
+
+#curriculum #boton2{
+	margin: 2%;
+}
+
+#curriculum #boton2 a{
+	text-decoration: none;
+	color: black;
+}
+
 .parrafo{text-align: left;width: 90%;border: 1px;border-style: solid;border-color: black;border-radius: 5px;font-style: italic;font-family: fantasy;}
 
 #stock img{
@@ -70,6 +86,10 @@ body{
 	margin: 5%;
 }
 
+#acceso2 input{
+	float: right;
+}
+
 .registro{
   padding: 2px;
   border-width: 1px;
@@ -78,25 +98,12 @@ body{
   border-style: solid;
 }
 
-#correo{
-margin: 2%;
-margin-left: 7.5%;
-}
-
-#contrasena{
-margin: 2%;
-}
-
 #formulario label{
-	margin: 5%;
-}
-#Acceder{
-	margin-left: 5%;
+	margin: 3%;
 }
 
 #cuerpo_faq{
 	background-color: white;
-	padding-bottom: 70%;
 }
 
 .faq{
@@ -104,4 +111,63 @@ margin: 2%;
 	height: 300px;
 	border: 1px solid black;
 	margin-top: 2px;
+}
+
+#cuerpo_contactar{
+	background-color: white;
+	padding-bottom: 500px;
+}
+
+#proyectos{
+	float: right;
+	width: 49%;
+	height: 400px;
+	margin: 2%;
+	border: 1px solid black;
+	border-radius: 5px;
+	overflow-y: scroll;
+	padding: 1%;
+}
+
+#proyectos img{
+	width: 20%;
+}
+
+#proyectos .proyecto{
+	margin: 2%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 2%;
+}
+
+#Contactar{
+	text-align: center;
+	width: 40%;
+	float: left;
+	margin: 2%;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+#formulario2 p{
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 5%;
+}
+
+#asunto{
+	margin: 5%;
+	text-align: center;
+	border-radius:50px;
+}
+
+#texto{
+	width: 90%;
+	height: 200px;
+	border: 2px solid black;
+	margin-top: 2%;
+	margin-bottom: 6%;
+	padding: 1% 1%;
+	margin-left: 2%;
+	margin-right: 2%;
 }
