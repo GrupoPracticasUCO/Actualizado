@@ -1,5 +1,19 @@
 
+//var paginas = ["Categorias","MisProyectos","Nuevo_Proyecto","Detalle_Proyecto","Donar","Contactar","Faq","Busqueda"];
+//var pag, nuevo;
 
+/*window.onload = function(){
+	pag = String(window.location);// se queda
+	console.log("pagina "  + pag);
+	nuevo = extraerPagina(pag);
+	console.log("nuevo " + nuevo);
+	if(!addButton(nuevo,paginas)){
+		document.getElementById("titulo").style.width = "55%";
+		var remover = document.getElementsByClassName("cab-der");
+		document.getElementById("cabecera").removeChild(remover[0]);
+	}
+	console.log("imprimememememe ")
+};*/
 
 function addButton(nuevo,pagina){
 	var found = false;
@@ -8,7 +22,7 @@ function addButton(nuevo,pagina){
 	var a_element = document.createElement("a");
 	a_element.appendChild(contenido);
 	var h_ref = document.createAttribute("href");
-	h_ref.value = "#";
+	h_ref.value = "acceder.html";
 	var id_a = document.createAttribute("id");
 	id_a.value = "acceso";
 	a_element.setAttributeNode(id_a);
