@@ -1,10 +1,11 @@
-var nbotones = 4;
+var nProy = 4;
 var arrayList;
 var lista = [];
 
 var paginas = ["Categorias","MisProyectos","Nuevo_Proyecto","Detalle_Proyecto","Donar","Contactar","Faq"];
 var pag, nuevo;
 window.onload = function(){
+	//Esta parte es necesaria para el header
 	pag = String(window.location);
 	nuevo = extraerPagina(pag);
 	console.log("nuevo " + nuevo);
@@ -12,18 +13,57 @@ window.onload = function(){
 		document.getElementById("titulo").style.width = "55%";
 	}
 	
+	//Guardo todos los elemetos que habia en el div que almacena los proyectos
 	arrayList = document.getElementById("proyectos").children;
 	console.log("a ver " + arrayList);
-//	console.log(arrayList);
 
+	//Guardo todos los proyectos en un vector
 	for(i=1;i < arrayList.length; i++){
 		lista.push(arrayList[i].cloneNode(true));
 	}
-//	console.log(arrayList.length);
+	
+	//Borro todos los proyectos del documento, para despues poder mostrar tan solo los que me interesan
 	borrarHijos();
+	
+	//Como la cantidad de paginas depende de la cantidad de proyectos hay que crear los botones
+	CrearBotones();
 
-//	let op = getElementById("botPag").value;
-	for(i=0; i<lista.length/nbotones; i++){
+	//Cuando haga click en uno de los botones mostrare la parte del vector que le corresponda
+	document.getElementById("botPag").addEventListener("click", function(evt){
+		id = evt.target.id;
+
+		//Muestro la parte que me interesa del vector de proyectos que me interesa
+		let parte = nProy * (id[id.length -1] -1);
+		console.log("parte" + parte);
+		console.log("lista.length: "+ lista.length);
+		
+		borrarHijos();
+		let i = parte;
+		while(i<nProy+parte && i<lista.length){
+			document.getElementById("proyectos").insertBefore(lista[i], arrayList[arrayList.length-1]);
+			console.log("i: " + i);
+			i++;
+		}
+
+	});
+
+
+
+	/*document.getElementById("").addEventListener("mouseover",function(){
+
+	});*/
+}
+
+function borrarHijos(){
+	var oldproy = document.getElementsByClassName("proyecto");
+	for(i=oldproy.length-1; i>=0; i--){
+		document.getElementById("proyectos").removeChild(oldproy[i]);
+	}
+
+}
+
+function CrearBotones(){
+	for(i=0; i<lista.length/nProy; i++){
 		let Bname = i+1;
 		let boton = document.createElement("button");
 		boton.innerText = Bname;
@@ -46,22 +86,5 @@ window.onload = function(){
 		
 		
 		div_bot.appendChild(boton);
-	}
-
-	document.getElementById("botPag").addEventListener("click", function(evt){
-		id = evt.target.id;
-		console.log(id);
-	});
-
-	/*document.getElementById("").addEventListener("mouseover",function(){
-
-	});*/
-}
-
-function borrarHijos(){
-	var oldproy = document.getElementsByClassName("proyecto");
-	for(i=oldproy.length-1; i>=0; i--){
-		document.getElementById("proyectos").removeChild(oldproy[i]);
-	}
-
+	}	
 }
