@@ -13,6 +13,7 @@ and open the template in the editor.
 		<link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
 		<link href="css/estilos.css" rel="stylesheet" type="text/css"/>
 		<script src="js/functionheader.js" type="text/javascript"></script>
+		<script src="js/funcionesFormReg.js" type="text/javascript"></script>
 		<script src="js/funcionesJS.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -53,7 +54,7 @@ and open the template in the editor.
 			
 			<div id="contenido-curr">
 				<div id="crear-curriculum">
-					<form id="form-curriculum" name="formcurriculum" method="post">
+					<form id="form-curriculum" name="formcurriculum" method="POST">
 						<div>
 							<fieldset>
 								<legend>DATOS PERSONALES</legend>
@@ -68,6 +69,7 @@ and open the template in the editor.
 									<div class="col-der-cur">
 										<input type="text" id="direccion" name="direccion" placeholder="Direccion" required="required"/>
 										<input type="email" id="email" name="email" placeholder="Correo electronico" required="required"/>
+										<span id="sp_mo"></span>
 										<input type="text" id="movil" name="movil" placeholder="Numero de telefono" maxlength="9" required="required"/>
 									</div>
 								</div>
@@ -85,7 +87,7 @@ and open the template in the editor.
 									<div class="col-izq-cur">
 										<p>IDIOMAS</p>
 										
-										<input type="checkbox" name="curcheckidioma" /> Castellano<br>
+										<input type="checkbox" name="curcheckidioma"/> Castellano<br>
 										<input type="checkbox" name="curcheckidioma" /> Ingles<br>
 										<input type="checkbox" name="curcheckidioma" /> Frances<br>
 										<input type="checkbox" name="curcheckidioma" /> Aleman<br>
@@ -103,7 +105,7 @@ and open the template in the editor.
 								<div class="four-row-cur">
 									<div class="col-izq-cur">									
 										<p>LENGUAJES</p>
-										<input type="checkbox" name="curchecklanguage" /> C/C++<br>
+										<input type="checkbox" name="curchecklanguage"/> C/C++<br>
 										<input type="checkbox" name="curchecklanguage" /> Fortran<br>
 										<input type="checkbox" name="curchecklanguage" /> MatLab<br>
 										<input type="checkbox" name="curchecklanguage" /> SQL<br>
