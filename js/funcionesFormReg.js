@@ -33,6 +33,7 @@ function formularioRegistro(){
 	document.getElementById("nombre").addEventListener("keypress",validarNombre);
 	document.getElementById("apellido").addEventListener("keypress",validarNombre);
 	document.getElementById("movil").addEventListener("keydown",validarTelefono);
+	document.getElementById("contrasena").addEventListener("keydown",validarContrasena);
 
 	document.getElementsByName("cancelar")[0].addEventListener("click",function(evt){
 		document.formregistro.nombre.focus();
@@ -48,9 +49,11 @@ function formularioRegistro(){
 * @param {object} evt - parametro que obtiene el evento que se ha invocado
 */
 function validarRegistro(evt){
-	correo = document.getElementById("email").value;
-	movil = document.getElementById("movil").value;
-	id = document.getElementById("dni").value;
+	var correo = document.getElementById("email").value;
+	var movil = document.getElementById("movil").value;
+	var id = document.getElementById("dni").value;
+	var valor = document.getElementById("contrasena").value.length;
+	console.log("valor " + valor);
 
 	if(!num_movil.test(movil)){
 		document.getElementById("movil").style.border = "1px solid  rgba(255,55,61,1)";
@@ -62,9 +65,20 @@ function validarRegistro(evt){
 		evt.preventDefault();
 	}
 
+	if(valor < 8){
+		document.getElementById("dni").style.border = "1px solid  rgba(255,55,61,1)";
+		evt.preventDefault();
+	}
+
 	if((id.length !== 0) && (!dni.test(id))){
 		document.getElementById("dni").style.border = "1px solid  rgba(255,55,61,1)";
 		evt.preventDefault();
+	}
+}
+
+function validarContrasena(evt){
+	if(this.value.length >= 8){
+		this.style.border = "1px solid lightgray";
 	}
 }
 
