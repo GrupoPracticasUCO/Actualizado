@@ -21,12 +21,20 @@ window.onload = function(){
 	for(i=1;i < arrayList.length; i++){
 		lista.push(arrayList[i].cloneNode(true));
 	}
+
 	
 	//Borro todos los proyectos del documento, para despues poder mostrar tan solo los que me interesan
 	borrarHijos();
 	
 	//Como la cantidad de paginas depende de la cantidad de proyectos hay que crear los botones
 	CrearBotones();
+	
+	//Por defecto se mostraran los n primeros elementos, es decir la primera pagina
+	let j=0;
+	while(j<nProy && j<lista.length){
+		document.getElementById("proyectos").insertBefore(lista[j], arrayList[arrayList.length]);
+		j++;
+	}
 
 	//Cuando haga click en uno de los botones mostrare la parte del vector que le corresponda
 	document.getElementById("botPag").addEventListener("click", function(evt){
@@ -40,7 +48,7 @@ window.onload = function(){
 		borrarHijos();
 		let i = parte;
 		while(i<nProy+parte && i<lista.length){
-			document.getElementById("proyectos").insertBefore(lista[i], arrayList[arrayList.length-1]);
+			document.getElementById("proyectos").insertBefore(lista[i], arrayList[arrayList.length]);
 			console.log("i: " + i);
 			i++;
 		}
