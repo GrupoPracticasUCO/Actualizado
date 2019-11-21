@@ -15,7 +15,6 @@ window.onload = function(){
 	
 	//Guardo todos los elemetos que habia en el div que almacena los proyectos
 	arrayList = document.getElementById("proyectos").children;
-	console.log("a ver " + arrayList);
 
 	//Guardo todos los proyectos en un vector
 	for(i=1;i < arrayList.length; i++){
@@ -39,27 +38,48 @@ window.onload = function(){
 	//Cuando haga click en uno de los botones mostrare la parte del vector que le corresponda
 	document.getElementById("botPag").addEventListener("click", function(evt){
 		id = evt.target.id;
-
+		
 		//Muestro la parte que me interesa del vector de proyectos que me interesa
 		let parte = nProy * (id[id.length -1] -1);
-		console.log("parte" + parte);
-		console.log("lista.length: "+ lista.length);
 		
 		borrarHijos();
 		let i = parte;
 		while(i<nProy+parte && i<lista.length){
 			document.getElementById("proyectos").insertBefore(lista[i], arrayList[arrayList.length]);
-			console.log("i: " + i);
 			i++;
 		}
-
 	});
+	
+	document.getElementById("proyectos").addEventListener("click", function(evt){
+		//Elimino la imagen anterior
+		document.getElementById("imgPrSelect").removeChild(document.getElementById("imgPrSelect").firstChild);
+		
+		id = evt.target.id;
 
+		//Ahora teniendo el id del proyecto habria que cargar su imagen
 
+		let div_img = document.getElementById("imgPrSelect");
+		let imagen = document.createElement("img");
 
-	/*document.getElementById("").addEventListener("mouseover",function(){
+		//Le asigno un sorce a la imagen
+		let src_attribute = document.createAttribute("src");
+		//Despues habra que actualizar el path de la imagen de cada proyecto obteniendolo de una base de datos
+		if(id == "proy2"){
+			src_attribute.value = "./img/Logo_UGR.jpeg";
+		}
+		else{
+			src_attribute.value = "./img/Logo_UCO.png";
+		}
+		///////////////////////////////////////////
+		imagen.setAttributeNode(src_attribute);
 
-	});*/
+		//Y un alt
+		let alt_attribute = document.createAttribute("alt");
+		alt_attribute.value = id;
+		imagen.setAttributeNode(alt_attribute);
+		
+		div_img.appendChild(imagen);
+	});
 }
 
 function borrarHijos(){
@@ -86,13 +106,11 @@ function CrearBotones(){
 		let id_attribute = document.createAttribute("id");
 		id_attribute.value = "Bpaginado_"+Bname;
 		boton.setAttributeNode(id_attribute);
-		
 
-		let valor_attribute = document.createAttribute("valor");
+/*		let valor_attribute = document.createAttribute("valor");
 		valor_attribute.value = ""+Bname+"";
-		boton.setAttributeNode(valor_attribute);
-		
-		
+		boton.setAttributeNode(valor_attribute);*/
+
 		div_bot.appendChild(boton);
 	}	
 }

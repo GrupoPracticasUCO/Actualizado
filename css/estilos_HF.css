@@ -6,7 +6,8 @@
 body{
     margin: 0 auto;
     font-size: 0.9em;
-    background-color: #e9efee;
+    /*background-color: #e9efee;*/
+    background: rgba(99,96,95,1);
 }
 #logo img{
     width: 100px;
@@ -115,6 +116,12 @@ body{
     position:relative;
 }
 
+#cabecera .relleno-cab{
+    width: 100%;
+    background: rgba(248,81,24,1);
+    float:left;
+    height: 10px;
+}
 /**********************************************************************************************************/
 /********************************************** FOOTER ****************************************************/
 footer{
@@ -184,12 +191,3 @@ footer{
 }
 
 /*******/
-#sp_mo,.sp_mo{
-    color:red;
-    font-size: 0.7em;
-    float: left;
-}
-
-textarea{
-    resize: none;
-}
