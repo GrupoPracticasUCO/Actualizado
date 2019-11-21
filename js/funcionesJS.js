@@ -1,10 +1,11 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-
-    Created on : 24-oct-2019, 23:08:02
-    Author     : Oscar
+*
+*   Created on : 24-oct-2019, 23:08:02
+*   Author     : Oscar Godoy
+*	Modificado: 28-oct, 31-oct, 03-nov, 04-nov, 10-nov, 12-nov, 19-nov, 20-nov
+*	Descripcion: Aplicar las funciones segun el nombre de pagina entre ellas Categorias, Registro y Curriculum
+*	Uso: Controlar los formularios de Registro y Curriculum, Paginacion en Categorias.html dependiendo de la categoria seleccionada
+*	se aplican las funciones y procesos dentro de window.onload 
 */
 
 var pag,pos,pos2,correo,movil;
@@ -17,10 +18,14 @@ var paginas = ["Categorias","MisProyectos","Nuevo_Proyecto","Detalle_Proyecto","
 /**
 * variables para paginacion 
 */
+/** variable que obtendra los nodos hijos donde se insertara el contenido para la paginacion */
 var items;
+/** Se guarda en un array los nodos que recibe de 'items' */
 var itemArray = [];
 var i=0;
+/** Numero de contenidos por pagina */
 var div_por_pagina = 3;
+/** se guarda el id dado con anterioridad y el actual en la paginacion */
 var id,id_anterior;
 var clase = document.createAttribute("class");
 clase.value = "active";

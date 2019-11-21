@@ -1,10 +1,13 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-
-    Created on : 11-nov-2019, 18:19:52
-    Author     : Oscar
+*
+*   Created on : 08-nov-2019, 18:19:52
+*   Author     : Oscar Godoy
+*	Modificado: 08-nov, 09-nov, 11-nov
+*	Descripcion: tratamiento del formulario de Registro.html
+*	Uso: Controlar que los campos del formulario esten controlados segun la accion
+*	del usuario, no permitira numeros en campos alfabeticos y viceversa en campos 
+*	numericos. Tambien controla la longitud minima de contraseña y que sea correcto el 
+*	dni mediante expresion regular. Utiliza funciones para slider de la pagina Registro.html y Modificar_datos.html
 */
 
 /**
@@ -76,6 +79,10 @@ function validarRegistro(evt){
 	}
 }
 
+/**
+* En caso el validador del campo contrasena este en rojo resaltado y cumple la condicion entonces cambia el color
+* @param {object} evt - parametro que obtiene el evento que se ha invocado
+*/
 function validarContrasena(evt){
 	if(this.value.length >= 8){
 		this.style.border = "1px solid lightgray";

@@ -1,20 +1,18 @@
+/**
+*
+*   Created on : 03-nov-2019, 09:24:36
+*   Author     : Oscar Godoy
+*	Modificado: 03-nov
+*	Descripcion: Funciones aplicables a todas las paginas del sitio
+*	Uso: obtener la url para crear elementos segun el nombre de pagina
+*/
 
-//var paginas = ["Categorias","MisProyectos","Nuevo_Proyecto","Detalle_Proyecto","Donar","Contactar","Faq","Busqueda"];
-//var pag, nuevo;
-
-/*window.onload = function(){
-	pag = String(window.location);// se queda
-	console.log("pagina "  + pag);
-	nuevo = extraerPagina(pag);
-	console.log("nuevo " + nuevo);
-	if(!addButton(nuevo,paginas)){
-		document.getElementById("titulo").style.width = "55%";
-		var remover = document.getElementsByClassName("cab-der");
-		document.getElementById("cabecera").removeChild(remover[0]);
-	}
-	console.log("imprimememememe ")
-};*/
-
+/**
+* Añadira un boton en el encabezado de la pagina para iniciar sesion o registrarse
+* @constructor
+* @param {string} nuevo - recibe el nombre de la pagina donde aplicar
+* @param {array} pagina - array con lista de paginas donde se añadira el boton
+*/
 function addButton(nuevo,pagina){
 	var found = false;
 	
@@ -39,6 +37,10 @@ function addButton(nuevo,pagina){
 	return found;
 }
 
+/**
+* extrae de la URL el nombre de la pagina actual
+* @param {string} caddena - url para extraer una parte de la cadena
+*/
 function extraerPagina(cadena){
 	pos = cadena.lastIndexOf("/");
 	pos2 = cadena.lastIndexOf(".");
