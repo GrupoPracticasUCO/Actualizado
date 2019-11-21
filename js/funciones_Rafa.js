@@ -10,16 +10,18 @@ window.onload = function(){
 		var remover = document.getElementsByClassName("cab-der");
 		document.getElementById("cabecera").removeChild(remover[0]);
 	}
-  document.getElementById("EnviarAcceder").addEventListener("click",function(){
-    contrasena=document.getElementById("ContrasenaAcceder").value;
-    fallo=validarContrasena(contrasena);
-    if (fallo=="") {
-      return true;
-    }else{
-      alert(fallo);
-      return false;
-    }
-  });
+  if (nuevo=="Acceder"){
+    document.getElementById("EnviarAcceder").addEventListener("click",function(){
+      contrasena=document.getElementById("ContrasenaAcceder").value;
+      fallo=validarContrasena(contrasena);
+      if (fallo=="") {
+        return true;
+      }else{
+        alert(fallo);
+        return false;
+      }
+    });
+  }
 }
 function validarContrasena(input){
   if (input.length==0) {
