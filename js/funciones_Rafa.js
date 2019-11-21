@@ -10,7 +10,7 @@ window.onload = function(){
 		var remover = document.getElementsByClassName("cab-der");
 		document.getElementById("cabecera").removeChild(remover[0]);
 	}
-  if (nuevo=="Acceder"){
+  if (nuevo=="acceder"){
     document.getElementById("EnviarAcceder").addEventListener("click",function(){
       contrasena=document.getElementById("ContrasenaAcceder").value;
       fallo=validarContrasena(contrasena);

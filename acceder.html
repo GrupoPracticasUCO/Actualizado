@@ -53,17 +53,17 @@
           <!-- Enviar a la base de datos -->
           <div id="acceso2">
             <form id="formulario" method="post" name="formAcceso">
-              <div>
-                <!-- <label for="Titulo">Correo:</label> -->
-                <input id="emailAcceder" class="input" type="email" name="user" placeholder="Correo Electronico">
-              </div>
-              <div>
-                <!--<label for="Titulo">Contrase&ntildea:</label> -->
-                <input id="ContrasenaAcceder"class="input" type="password" name="pass" placeholder="Contraseña">
-              </div>
-              <div>
-               <input id="EnviarAcceder" class="button" type="submit" value="Enviar">
-              </div>
+              <div class="container">
+                 <label for="uname"><b>Correo:</b></label>
+                 <input type="text" placeholder="Introduce el correo" name="uname" required>
+                 <br>
+                 <label for="psw"><b>Contrase&ntildea:</b></label>
+                 <input id="ContrasenaAcceder" type="password" placeholder="Enter Password" name="psw" required>
+                 <button id="EnviarAcceder" class="button" type="submit">Acceder</button>
+               </div>
+               <div class="container">
+                 <span class="psw"><a href="./Contrasenya.html">¿Olvidaste la contrase&ntildea?</a></span>
+               </div>
             </form>
             <br>
             <a id="registro" href="./Registro.html">Crear una cuenta</a>
