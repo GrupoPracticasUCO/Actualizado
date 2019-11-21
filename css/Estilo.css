@@ -68,7 +68,7 @@ body{
 
 #cuerpo_acceder{
 	background-color: white;
-	padding-bottom: 350px;
+	padding-bottom: 420px;
 }
 
 #stock img{
@@ -90,7 +90,8 @@ body{
 }
 
 #acceso2 input{
-	float: right;
+	/*float: right;*/
+
 }
 
 .button{
@@ -114,7 +115,13 @@ body{
 }
 
 #formulario label{
-	margin: 3%;
+	/*margin: 3%;*/
+	vertical-align: auto;
+}
+
+#formulario div{
+	width:100%;
+	float:left;
 }
 
 #registro{

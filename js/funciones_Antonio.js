@@ -93,7 +93,7 @@ window.onload = function(){
         evt.preventDefault();
       }
     });
-    showSlides(slideIndex);
+    //showSlides(slideIndex);
   }
 };
 
