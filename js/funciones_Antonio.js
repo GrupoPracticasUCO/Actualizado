@@ -22,6 +22,8 @@ window.onload = function(){
 
   if(!addButton(nuevo,paginas)){
     document.getElementById("titulo").style.width = "55%";
+    var remover = document.getElementsByClassName("cab-der");
+    document.getElementById("cabecera").removeChild(remover[0]);
   }
 
   //página de busqueda
