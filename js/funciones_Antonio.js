@@ -3,7 +3,7 @@
 ////////////////////////////Funcion Onload////////////////////////////
 
 //variables usadas para la funcion onload
-var paginas = ["Modificar_Datos","Busqueda","Categorias","MisProyectos","Nuevo_Proyecto","Detalle_Proyecto","Donar","Contactar","Faq"];
+var paginas = ["Busqueda","Categorias","MisProyectos","Nuevo_Proyecto","Detalle_Proyecto","Donar","Contactar","Faq"];
 var pag, nuevo;
 var mails = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/;
 var num_movil = /^([6]|[7]|[9])[0-9]{8}$/;
@@ -22,6 +22,8 @@ window.onload = function(){
 
   if(!addButton(nuevo,paginas)){
     document.getElementById("titulo").style.width = "55%";
+    var remover = document.getElementsByClassName("cab-der");
+    document.getElementById("cabecera").removeChild(remover[0]);
   }
 
   //página de busqueda

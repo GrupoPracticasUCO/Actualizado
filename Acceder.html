@@ -3,9 +3,12 @@
   <head>
     <title>Acceder</title>
     <meta charset="utf-8">
-    <meta name="description" content="Página del perfil">
+    <meta name="description" content="Página para loguearte">
+    <meta name= "keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name= "author" content="Rafael Hormigo">
     <link href="css/Estilo.css" type="text/css" rel="stylesheet" />
     <link href="css/estilos_HF.css" type="text/css" rel="stylesheet" />
+    <script src="js/functionheader.js" type="text/javascript"> </script>
     <script src="js/funciones_Rafa.js" type="text/javascript"> </script>
   </head>
   <body>
@@ -45,8 +48,9 @@
         </header>
         <!-- ******************* Fin Cabecera ********************************   -->
           <div id="stock">
-            <img src="img/open_graph_logo.png"/>
+            <img src="img/Logo_UCO.png"/>
           </div>
+          <!-- Enviar a la base de datos -->
           <div id="acceso2">
             <form id="formulario" method="post" name="formAcceso">
               <p>
@@ -58,17 +62,19 @@
                 <input id="ContrasenaAcceder"class="input" type="password" name="pass">
               </p>
               <p>
-               <input id="EnviarAcceder" type="submit" value="Enviar">
+               <input id="EnviarAcceder" class="button" type="submit" value="Enviar">
               </p>
             </form>
+            <br>
+            <a id="registro" href="./Registro.html">Crear una cuenta</a>
           </div>
-        <!-- ******************* Footer ********************************   -->
-        <footer id="footer">
-  				<div class="boton_footer"><button><a href="faq.html">FAQ</a></button></div>
-  				<div class="boton_footer"><button><a href="faq.html">Contacta con nosotros</a></button></div>
-  				<div class="boton_footer"><button><a href="faq.html">¿Quienes somos?</a></button></div>
-  			</footer>
-        <!-- ******************* Fin Footer ********************************   -->
+          <!-- ******************* Inicio Footer ********************************   -->
+    			<footer id="footer">
+    				<div class="boton_footer esp"><a href="faq.html">FAQ</a></div>
+    				<div class="boton_footer"><a href="faq.html">Contacta con nosotros</a></div>
+    				<div class="boton_footer"><a href="faq.html">¿Quienes somos?</a></div>
+    			</footer>
+    			<!-- ******************* Fin Footer ********************************   -->
       </div>
     </div>
   </body>

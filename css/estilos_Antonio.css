@@ -9,7 +9,7 @@ body{
 
 #cuerpo{
     background-color: white;
-    padding-bottom: 1000px;
+    padding-bottom: 1200px;
 }
 #cuerpo_detalle_proyecto{
     background-color: white;
@@ -85,11 +85,17 @@ body{
   color: white;
 }
 
-.button{
+.button1, .button2{
     margin-top: 6%;
+    margin-bottom: 6%;
+    display: inline-block;
 }
 
-.button input{
+.button1{
+    margin-right: 3%;
+}
+
+.button1 input, .button2 input{
     background-color: #7F9CCB;
     padding: 5px 10px;
     border-radius: 5px;
@@ -101,7 +107,7 @@ body{
     color: black;
 }
 
-.button input:hover{
+.button1 input:hover, .button2 input:hover{
     background-color: #2D5BA3;
     color: white;
 }
@@ -194,9 +200,13 @@ body{
 }
 
 .img_proyecto img{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
     border: 1px solid black;
-    width: 450px;
-    height: 225px;
+    width: 25%;
+    height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
 
@@ -328,6 +338,7 @@ body{
 }
 
 .buscador_checkbox{
+    margin-top: 3%;
     display: block;
     width: 170px;
     border-radius: 5px;
@@ -377,7 +388,7 @@ body{
 }
 
 .bus_img_proyecto img{
-    width: 65%;
+    width: 40%;
 }
 
 .bus_titulo_proyecto{
